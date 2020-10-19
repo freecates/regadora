@@ -17,7 +17,8 @@ export default function Home() {
                 <h1 className={styles.title}>
                     <a href='https://regadora.cat'>
                         <img
-                            width='100%'
+                            width='2362'
+                            height='1181'
                             loading='lazy'
                             alt='Festival Regadora'
                             src='/tampo-bn-regadora.jpg'
