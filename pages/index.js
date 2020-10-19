@@ -12,7 +12,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <a href="https://regadora.cat"><img width='100%' alt='Festival Regadora' src='/tampo-bn-regadora.jpg'/></a>
+          <a href="https://regadora.cat"><img width='100%' loading="lazy" alt='Festival Regadora' src='/tampo-bn-regadora.jpg'/></a>
         </h1>
       </main>
 
