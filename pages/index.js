@@ -21,7 +21,7 @@ export default function Home() {
                             height='1181'
                             loading='lazy'
                             alt='Festival Regadora'
-                            src='/tampo-bn-regadora.jpg'
+                            src='/tampo-color-regadora.jpg'
                         />
                     </a>
                 </h1>
