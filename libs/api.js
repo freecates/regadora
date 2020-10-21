@@ -8,6 +8,13 @@ const api = {
       return data;
     }
   },
+  quisom: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/qui.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
   common: {
     async getData() {
       const response = await fetch(`${baseUrl}/common.json`);
