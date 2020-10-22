@@ -55,11 +55,12 @@
 
     @media (min-width: 768px) {
         font-size: 4rem;
+        
+        &.home {
+          padding: 7rem 0;
+        }
     }
 
-    &.home {
-      padding: 7rem 0;
-    }
 }
 
 .title,
