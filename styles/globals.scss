@@ -1,47 +1,63 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #91c824;
+    background-image: url('/senefa-562.png');
+}
+
+h1,
+h2,
+h3,
+nav {
+    font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+nav {
+    text-transform: uppercase;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 img {
-  width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-*, ::after, ::before {
-  box-sizing: border-box;
+*,
+::after,
+::before {
+    box-sizing: border-box;
 }
 
 nav {
-  max-width: 100rem;
-  margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
 
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    
-    @media (min-width:768px) {
-      flex-direction: row;
-      position: fixed;
-      width: 100rem;
-    }
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
 
-    li {
-      list-style-type: none;
-      padding: .5rem;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            position: fixed;
+            width: 100%;
+        }
+
+        li {
+            list-style-type: none;
+        }
     }
-  }
 }

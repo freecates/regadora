@@ -1,12 +1,20 @@
 import Link from 'next/link';
 
-const Nav = ({title}) => {
+const Nav = ({ title }) => {
     return (
         <nav>
             <ul>
                 <li>
                     <Link href='/'>
-                        <img width='320' height='120' loading='lazy' alt={title} src='/logo.jpg' />
+                        <a>
+                            <img
+                                width='320'
+                                height='120'
+                                loading='lazy'
+                                alt={title}
+                                src='/logo.png'
+                            />
+                        </a>
                     </Link>
                 </li>
                 <li>

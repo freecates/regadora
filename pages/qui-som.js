@@ -15,12 +15,12 @@ const Qui = ({ data }) => {
                 <meta name='description' content={`${description} | ${siteTitle}`} />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Nav title={siteTitle}/>
+            <Nav title={siteTitle} />
             <div className={styles.container}>
                 <main className={styles.main}>
                     <h1 className={styles.title}>{description}</h1>
                     <section className={styles.grid}>
-                        <div
+                        <h2
                             className='description'
                             dangerouslySetInnerHTML={{ __html: content.description }}
                         />
