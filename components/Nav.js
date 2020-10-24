@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import styles from './Nav.module.scss';
 
 const Nav = ({ title }) => {
     return (
-        <nav>
+        <nav className={styles.nav}>
             <ul>
                 <li>
                     <Link href='/'>

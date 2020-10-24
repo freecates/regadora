@@ -1,10 +1,13 @@
+@import 'styles/colors';
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
-    background-color: #91c824;
+    background-color: $main-green;
     background-image: url('/senefa-562.png');
+    color: $black;
 }
 
 h1,
@@ -12,6 +15,7 @@ h2,
 h3,
 nav {
     font-weight: 900;
+    color: $main-dark-blue;
 }
 
 h1,
@@ -35,30 +39,4 @@ img {
 ::after,
 ::before {
     box-sizing: border-box;
-}
-
-nav {
-    max-width: 100%;
-    margin: 0 auto;
-
-    ul {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 2rem;
-        background: #ffffff;
-
-        @media (min-width: 768px) {
-            padding: 0;
-            flex-direction: row;
-            position: fixed;
-            width: 100%;
-        }
-
-        li {
-            list-style-type: none;
-        }
-    }
 }
