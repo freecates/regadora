@@ -23,12 +23,20 @@
         li {
             list-style-type: none;
 
+            &.active {
+                a {
+                    color: $secondary-lilac;
+                    border-bottom: 0.25rem solid;
+                }
+            }
+
             a {
-                padding: .25rem 0;
+                padding: 0.25rem 0;
                 transition: color ease 1s;
+
                 &:hover {
                     color: $secondary-lilac;
-                    border-bottom: .25rem solid;
+                    border-bottom: 0.25rem solid;
                 }
             }
 
@@ -38,6 +46,5 @@
                 }
             }
         }
-
     }
 }
