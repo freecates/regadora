@@ -22,6 +22,13 @@ const api = {
       return data;
     }
   },
+  routes: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/routes.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
 };
 
 
