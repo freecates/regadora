@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from './Nav.module.scss';
+import Image from 'next/image';
 
 const Nav = ({ title, navRoutes }) => {
     const home = navRoutes.filter((x) => x.route === '/');
@@ -14,7 +15,7 @@ const Nav = ({ title, navRoutes }) => {
                     <li key={index} className={router.pathname == h.route ? 'active' : ''}>
                         <Link href={h.route}>
                             <a>
-                                <img
+                                <Image
                                     width='320'
                                     height='120'
                                     loading='lazy'

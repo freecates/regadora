@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import styles from '../styles/Home.module.scss';
 import api from '../libs/api.js';
 import Link from 'next/link';
+import Image from 'next/image'
 
 const Home = ({ data }) => {
     const { title, description, content, footer, siteTitle, routes } = data;
@@ -19,7 +20,7 @@ const Home = ({ data }) => {
             <h1 className={`${styles.title} ${styles.home}`}>
                 <Link href='/'>
                     <a>
-                        <img
+                        <Image
                             width='2362'
                             height='1181'
                             loading='lazy'
