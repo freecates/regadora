@@ -21,6 +21,7 @@ const Nav = ({ title, navRoutes }) => {
                                     loading='lazy'
                                     alt={title}
                                     src='/logo.png'
+                                    quality='100'
                                 />
                             </a>
                         </Link>
