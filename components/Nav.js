@@ -18,7 +18,6 @@ const Nav = ({ title, navRoutes }) => {
                                 <Image
                                     width='320'
                                     height='120'
-                                    loading='lazy'
                                     alt={title}
                                     src='/logo.png'
                                     quality='100'
