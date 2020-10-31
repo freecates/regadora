@@ -52,17 +52,13 @@ const Home = ({ regadora, common, routes, presentacio }) => {
                 </main>
             </div>
             <h1 className={`${styles.title} ${styles.home}`}>
-                <Link href='/'>
-                    <a>
-                        <Image
-                            width='2362'
-                            height='1181'
-                            loading='lazy'
-                            alt={regadoraTitle}
-                            src={`${assetsURL}${mainImage}`}
-                        />
-                    </a>
-                </Link>
+                <Image
+                    width='2362'
+                    height='1181'
+                    loading='lazy'
+                    alt={regadoraTitle}
+                    src={`${assetsURL}${mainImage}`}
+                />
             </h1>
             <div className={styles.container}>
                 <main className={`${styles.main} ${styles.home}`}>

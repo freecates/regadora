@@ -24,6 +24,7 @@
         li {
             list-style-type: none;
             max-width: 100%;
+            margin: 0 .5rem;
 
             &.active {
                 a {
@@ -43,9 +44,13 @@
             }
 
             &:first-child {
+                margin: 0;
                 a:hover {
                     border-bottom: none;
                 }
+            }
+            &:last-child {
+                margin-right: 0;
             }
         }
     }

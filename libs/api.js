@@ -15,6 +15,13 @@ const api = {
       return data;
     }
   },
+  perque: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/per-que.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
   quisom: {
     async getData() {
       const response = await fetch(`${baseUrl}/qui.json`);
