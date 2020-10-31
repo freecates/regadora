@@ -1,9 +1,16 @@
-const baseUrl = `https://regadora-data.vercel.app`;
+const baseUrl = process.env.BASE_URL;
 
 const api = {
   regadora: {
     async getData() {
       const response = await fetch(`${baseUrl}/regadora.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
+  presentacio: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/presentacio.json`);
       const data = await response.json();
       return data;
     }
