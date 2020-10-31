@@ -30,7 +30,7 @@ const PerQue = ({ data }) => {
                 />
             </h1>
             <div className={styles.container}>
-                <main className={styles.main}>
+                <main className={`${styles.main} ${styles.home}`}>
                     <h2>{title}</h2>
                     <section className={styles.grid}>
                         <div
