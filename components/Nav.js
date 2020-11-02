@@ -10,7 +10,7 @@ const Nav = ({ title, navRoutes }) => {
 
     return (
         <nav className={styles.nav}>
-            <ul>
+            <ul className={styles.main}>
                 {home.map((h, index) => (
                     <li key={index} className={router.pathname == h.route ? 'active' : ''}>
                         <Link href={h.route}>
@@ -26,14 +26,18 @@ const Nav = ({ title, navRoutes }) => {
                         </Link>
                     </li>
                 ))}
-                {routes.map((route, index) => (
-                    <li
-                        key={index}
-                        className={`${router.pathname == route.route ? styles.active : ''}`}
-                    >
-                        <Link href={route.route}>{route.name}</Link>
-                    </li>
-                ))}
+                <li>
+                    <ul className={styles.secondary}>
+                        {routes.map((route, index) => (
+                            <li
+                                key={index}
+                                className={`${router.pathname == route.route ? styles.active : ''}`}
+                            >
+                                <Link href={route.route}>{route.name}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </li>
             </ul>
         </nav>
     );

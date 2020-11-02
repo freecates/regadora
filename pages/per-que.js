@@ -1,9 +1,7 @@
-import Head from 'next/head';
 import Image from 'next/image';
-import Nav from '../components/Nav';
 import styles from '../styles/Home.module.scss';
 import api from '../libs/api.js';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
@@ -11,15 +9,13 @@ const PerQue = ({ data }) => {
     const { title, content, footer, siteTitle, routes, mainImage } = data;
 
     return (
-        <>
-            <Head>
-                <title>
-                    {title} | {siteTitle}
-                </title>
-                <meta name='description' content={`${title} | ${siteTitle}`} />
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
-            <Nav title={siteTitle} navRoutes={routes} />
+        <Layout
+            title={siteTitle}
+            navRoutes={routes}
+            footer={footer}
+            pageTitle={title}
+            pageDescription={title}
+        >
             <h1 className={`${styles.title} ${styles.home}`}>
                 <Image
                     width='2362'
@@ -39,10 +35,8 @@ const PerQue = ({ data }) => {
                         />
                     </section>
                 </main>
-
-                <Footer footer={footer} />
             </div>
-        </>
+        </Layout>
     );
 };
 

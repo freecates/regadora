@@ -4,7 +4,7 @@
     max-width: 100%;
     margin: 0 auto;
 
-    ul {
+    .main {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -24,37 +24,53 @@
         li {
             list-style-type: none;
             max-width: 100%;
-            margin:.5rem 0;
 
-            @media (min-width: 768px) {
-                margin: 0 .5rem;
-            }
-
-            &.active {
-                a {
-                    color: $secondary-lilac;
-                    border-bottom: 0.25rem solid;
-                }
-            }
-
-            a {
-                padding: 0.25rem 0;
-                transition: color ease 1s;
-
-                &:hover {
-                    color: $secondary-lilac;
-                    border-bottom: 0.25rem solid;
-                }
-            }
-
-            &:first-child {
+            .secondary {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: center;
                 margin: 0;
-                a:hover {
-                    border-bottom: none;
+                background: $white;
+                z-index: 3000;
+                padding: 0;
+                flex-wrap: wrap;
+
+                li {
+                    margin: 0 0.5rem;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    @media (min-width: 768px) {
+                        margin: 0 1rem;
+                    }
+
+                    &.active {
+                        a {
+                            color: $secondary-lilac;
+                            border-bottom: 0.25rem solid;
+                        }
+                    }
+
+                    a {
+                        padding: 0.25rem 0;
+                        transition: color ease 1s;
+                        font-size: 0.85rem;
+
+                        @media (min-width: 768px) {
+                            font-size: 1rem;
+                        }
+
+                        &:hover {
+                            color: $secondary-lilac;
+                            border-bottom: 0.25rem solid;
+                        }
+                    }
                 }
-            }
-            &:last-child {
-                margin-right: 0;
             }
         }
     }

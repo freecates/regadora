@@ -1,22 +1,18 @@
-import Head from 'next/head';
-import Nav from '../components/Nav';
 import styles from '../styles/Home.module.scss';
 import api from '../libs/api.js';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 const Qui = ({ data }) => {
     const { title, description, content, footer, siteTitle, routes } = data;
 
     return (
-        <>
-            <Head>
-                <title>
-                    {title} | {siteTitle}
-                </title>
-                <meta name='description' content={`${description} | ${siteTitle}`} />
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
-            <Nav title={siteTitle} navRoutes={routes} />
+        <Layout
+            title={siteTitle}
+            navRoutes={routes}
+            footer={footer}
+            pageTitle={title}
+            pageDescription={description}
+        >
             <div className={styles.container}>
                 <main className={styles.main}>
                     <h1 className={styles.title}>{description}</h1>
@@ -27,10 +23,8 @@ const Qui = ({ data }) => {
                         />
                     </section>
                 </main>
-
-                <Footer footer={footer} />
             </div>
-        </>
+        </Layout>
     );
 };
 

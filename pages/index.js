@@ -1,10 +1,8 @@
-import Head from 'next/head';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import styles from '../styles/Home.module.scss';
 import api from '../libs/api.js';
 import Link from 'next/link';
 import Image from 'next/image';
+import Layout from '../components/Layout';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
@@ -20,13 +18,14 @@ const Home = ({ regadora, common, routes, presentacio }) => {
     const { title: presentacioTitle, content: presentacioContent, mainImage } = presentacio;
 
     return (
-        <>
-            <Head>
-                <title>{regadoraTitle}</title>
-                <meta name='description' content={`${regadoraDescription}`} />
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
-            <Nav title={siteTitle} navRoutes={routes} />
+        <Layout
+            title={siteTitle}
+            navRoutes={routes}
+            footer={footer}
+            pageTitle={regadoraTitle}
+            pageDescription={regadoraDescription}
+            home
+        >
             <h1 className={`${styles.title} ${styles.home}`}>
                 <Link href='/'>
                     <a>
@@ -71,10 +70,7 @@ const Home = ({ regadora, common, routes, presentacio }) => {
                     </section>
                 </main>
             </div>
-            <div className={styles.container}>
-                <Footer footer={footer} />
-            </div>
-        </>
+        </Layout>
     );
 };
 
