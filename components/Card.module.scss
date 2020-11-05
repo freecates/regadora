@@ -2,8 +2,9 @@
 
 .card {
     background: transparentize($white, 0.5);
-    margin: 1rem;
+    margin: 1rem 0 ;
     flex-basis: 45%;
+    width: 100%;
     padding: 1.5rem;
     text-align: left;
     color: inherit;
@@ -11,6 +12,11 @@
     border: 1px solid $secondary-red;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    @media (min-width: 768px) {
+        width: unset;
+        margin: 1rem;
+    }
 
     h3 {
         margin: 0 0 1rem 0;
