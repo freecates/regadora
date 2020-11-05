@@ -6,8 +6,6 @@ import Card from '../components/Card';
 const Qui = ({ data }) => {
     const { title, description, content, footer, siteTitle, routes, entities } = data;
 
-    console.log('entities ', entities);
-
     return (
         <Layout
             title={siteTitle}
