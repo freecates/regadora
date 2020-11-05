@@ -43,6 +43,13 @@ const api = {
       return data;
     }
   },
+  entities: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/entities.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
 };
 
 
