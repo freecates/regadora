@@ -1,7 +1,7 @@
 @import 'styles/colors';
 
 .card {
-    background: $white;
+    background: transparentize($white, 0.5);
     margin: 1rem;
     flex-basis: 45%;
     padding: 1.5rem;
@@ -15,7 +15,7 @@
 
 .card h3 {
     margin: 0 0 1rem 0;
-    color: $main-blue;
+    color: $secondary-lilac;
 }
 
 .card p {

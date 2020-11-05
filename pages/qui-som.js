@@ -43,6 +43,7 @@ export const getStaticProps = async () => {
         props: {
             data: { ...quisom[0], ...common[0], routes, entities },
         },
+        revalidate: 1,
     };
 };
 
