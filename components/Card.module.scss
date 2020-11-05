@@ -11,14 +11,21 @@
     border: 1px solid $secondary-red;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
-}
 
-.card h3 {
-    margin: 0 0 1rem 0;
-    color: $secondary-lilac;
-}
+    h3 {
+        margin: 0 0 1rem 0;
+        color: $secondary-lilac;
 
-.card p {
-    margin: 0;
-    line-height: 1.5;
+        a {
+            transition: color ease 1s;
+            &:hover {
+                color:$black;
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.5;
+    }
 }
