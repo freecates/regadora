@@ -1,7 +1,7 @@
-import styles from '../styles/Home.module.scss';
-import api from '../libs/api.js';
-import Layout from '../components/Layout';
-import Card from '../components/Card';
+import styles from '@styles/Home.module.scss';
+import api from '@libs/api.js';
+import Layout from '@components/layout';
+import Card from '@components/card';
 
 const Qui = ({ data }) => {
     const { title, description, content, footer, siteTitle, routes, entities } = data;

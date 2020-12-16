@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
-import api from '../libs/api.js';
-import Layout from '../components/Layout';
+import styles from '@styles/Home.module.scss';
+import api from '@libs/api.js';
+import Layout from '@components/layout';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
@@ -16,7 +16,7 @@ const PerQue = ({ data }) => {
             pageTitle={title}
             pageDescription={title}
         >
-            <h1 className={`${styles.title} ${styles.home}`}>
+            <h1 className={`${styles.title} ${styles.home}  ${styles.mainImageContainer}`}>
                 <Image
                     width='2362'
                     height='1181'

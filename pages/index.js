@@ -1,8 +1,8 @@
-import styles from '../styles/Home.module.scss';
-import api from '../libs/api.js';
+import styles from '@styles/Home.module.scss';
+import api from '@libs/api.js';
 import Link from 'next/link';
 import Image from 'next/image';
-import Layout from '../components/Layout';
+import Layout from '@components/layout';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
@@ -26,7 +26,7 @@ const Home = ({ regadora, common, routes, presentacio }) => {
             pageDescription={regadoraDescription}
             home
         >
-            <h1 className={`${styles.title} ${styles.home}`}>
+            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer}`}>
                 <Link href='/'>
                     <a>
                         <Image
@@ -50,7 +50,7 @@ const Home = ({ regadora, common, routes, presentacio }) => {
                     </section>
                 </main>
             </div>
-            <h1 className={`${styles.title} ${styles.home}`}>
+            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer}`}>
                 <Image
                     width='2362'
                     height='1181'
