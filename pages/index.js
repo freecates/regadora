@@ -26,7 +26,7 @@ const Home = ({ regadora, common, routes, presentacio }) => {
             pageDescription={regadoraDescription}
             home
         >
-            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer}`}>
+            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer} ${styles.fadeIn}`}>
                 <Link href='/'>
                     <a>
                         <Image
@@ -50,7 +50,7 @@ const Home = ({ regadora, common, routes, presentacio }) => {
                     </section>
                 </main>
             </div>
-            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer}`}>
+            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer} ${styles.fadeIn}`}>
                 <Image
                     width='2362'
                     height='1181'

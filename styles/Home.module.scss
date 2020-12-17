@@ -44,7 +44,13 @@
         font-size: 4rem;
         
         &.home {
-          padding: 7rem 0;
+          padding: 7rem 0 0 0;
+        }
+    }
+
+    @media (min-width: 2400px) {        
+        &.home {
+          padding: 10rem 0 0 0;
         }
     }
 
@@ -116,4 +122,18 @@
     width: 100%;
     max-width: 148rem;
     margin: 0 auto;
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

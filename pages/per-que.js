@@ -16,7 +16,7 @@ const PerQue = ({ data }) => {
             pageTitle={title}
             pageDescription={title}
         >
-            <h1 className={`${styles.title} ${styles.home}  ${styles.mainImageContainer}`}>
+            <h1 className={`${styles.title} ${styles.home} ${styles.mainImageContainer} ${styles.fadeIn}`}>
                 <Image
                     width='2362'
                     height='1181'
