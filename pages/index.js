@@ -23,7 +23,7 @@ const Home = ({ regadora, common, routes }) => {
             pageDescription={regadoraDescription}
             home
         >
-            <h1 className={`${styles.title} ${styles.home} ${styles.background} ${styles.mainImageContainer} ${styles.fadeIn}`}>{regadoraTitle}
+            <h1 className={`${styles.title} ${styles.home} ${styles.background} ${styles.mainImageContainer}`}>{regadoraTitle}
                 <br/><small>{claim}</small>
             </h1>
             <div className={styles.container}>

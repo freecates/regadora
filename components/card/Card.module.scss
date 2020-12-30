@@ -2,7 +2,7 @@
 
 .card {
     background: transparentize($white, 0.5);
-    margin: 1rem 0 ;
+    margin: 1rem 0;
     flex-basis: 45%;
     width: 100%;
     padding: 1.5rem;
@@ -25,7 +25,7 @@
         a {
             transition: color ease 1s;
             &:hover {
-                color:$black;
+                color: $black;
             }
         }
     }
@@ -33,5 +33,20 @@
     p {
         margin: 0;
         line-height: 1.5;
+    }
+
+    .fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 1.3s;
+        animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 }
