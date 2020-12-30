@@ -8,7 +8,13 @@ const Card = ({ data, files }) => {
                 {!d.web ? (
                     d.nom
                 ) : (
-                    <a href={d.web} title={`Enllaç extern a ${d.nom}`} target={'_blank'}>
+                    <a
+                        href={d.web}
+                        title={`Enllaç extern a ${d.nom}`}
+                        target={'_blank'}
+                        rel={'noopener'}
+                        rel={'noreferrer'}
+                    >
                         {d.nom}
                     </a>
                 )}
@@ -18,9 +24,8 @@ const Card = ({ data, files }) => {
                 files
                     .filter((x) => x.id == d.logo)
                     .map((f) => (
-                        <p className={styles.fadeIn}>
+                        <p className={styles.fadeIn} key={f.private_hash}>
                             <Image
-                                key={f.private_hash}
                                 width={f.width}
                                 height={f.height}
                                 loading='lazy'
