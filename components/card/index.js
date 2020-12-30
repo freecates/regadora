@@ -1,17 +1,34 @@
 import styles from './Card.module.scss';
+import Image from 'next/image';
 
-const Card = ({ data }) => {
+const Card = ({ data, files }) => {
+
     return data.map((d, index) => (
         <div className={styles.card} key={index + d.id}>
             <h3>
-                {!d.URL ? (
-                    d.name
+                {!d.web ? (
+                    d.nom
                 ) : (
-                    <a href={d.URL} title={`Enllaç extern a ${d.name}`} target={'_blank'}>
-                        {d.name}
+                    <a href={d.web} title={`Enllaç extern a ${d.nom}`} target={'_blank'}>
+                        {d.nom}
                     </a>
                 )}
             </h3>
+            {d.descripcio && <p>{d.descripcio}</p>}
+            {d.logo &&
+                files
+                    .filter((x) => x.id == d.logo)
+                    .map((f) => (
+                        <Image
+                            key={f.id}
+                            width={f.width}
+                            height={f.height}
+                            loading='lazy'
+                            alt={f.title}
+                            src={f.data.full_url}
+                            quality={75}
+                        />
+                    ))}
         </div>
     ));
 };

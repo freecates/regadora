@@ -39,17 +39,28 @@
     margin: 0;
     line-height: 1.15;
     font-size: 2rem;
+    &.background {
+      background: $white;
+    }
 
     @media (min-width: 768px) {
         font-size: 4rem;
         
         &.home {
+          padding: 10rem 0 0 0;
+        }
+
+        &.page {
           padding: 7rem 0 0 0;
         }
     }
 
     @media (min-width: 2400px) {        
         &.home {
+          padding: 13rem 0 0 0;
+        }
+
+        &.page {
           padding: 10rem 0 0 0;
         }
     }
@@ -64,6 +75,9 @@
 .description {
     line-height: 1.5;
     font-size: 1.5rem;
+    p {
+      padding: 1rem;
+    }
 }
 
 .code {

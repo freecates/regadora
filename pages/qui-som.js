@@ -4,8 +4,11 @@ import Layout from '@components/layout';
 import Card from '@components/card';
 
 const Qui = ({ data }) => {
-    const { title, description, content, footer, siteTitle, routes, entities } = data;
-
+    const { title, description, content, footer, siteTitle, routes, entities, files } = data;
+   
+    const cardData = [...entities.data];
+    const cardFiles = [...files.data];
+    
     return (
         <Layout
             title={siteTitle}
@@ -16,13 +19,13 @@ const Qui = ({ data }) => {
         >
             <div className={styles.container}>
                 <main className={styles.main}>
-                    <h1 className={styles.title}>{description}</h1>
+                    <h1 className={styles.title}>{title}</h1>
                     <section className={styles.grid}>
+                        <Card data={cardData} files={cardFiles} />
                         <h2
-                            className='description'
+                            className={styles.description}
                             dangerouslySetInnerHTML={{ __html: content.description }}
                         />
-                        <Card data={entities} />
                     </section>
                 </main>
             </div>
@@ -31,15 +34,16 @@ const Qui = ({ data }) => {
 };
 
 export const getStaticProps = async () => {
-    const [quisom, common, routes, entities] = await Promise.all([
+    const [quisom, common, routes, entities, files] = await Promise.all([
         api.quisom.getData(),
         api.common.getData(),
         api.routes.getData(),
         api.entities.getData(),
+        api.files.getData(),
     ]);
     return {
         props: {
-            data: { ...quisom[0], ...common[0], routes, entities },
+            data: { ...quisom[0], ...common[0], routes, entities, files },
         },
         revalidate: 1,
     };

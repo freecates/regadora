@@ -1,4 +1,5 @@
 const baseUrl = process.env.BASE_URL;
+const directusUrl= process.env.DIRECTUS_URL;
 
 const api = {
   regadora: {
@@ -45,7 +46,14 @@ const api = {
   },
   entities: {
     async getData() {
-      const response = await fetch(`${baseUrl}/entities.json`);
+      const response = await fetch(`${directusUrl}/items/entitats`);
+      const data = await response.json();
+      return data;
+    }
+  },
+  files: {
+    async getData() {
+      const response = await fetch(`${directusUrl}/files`);
       const data = await response.json();
       return data;
     }
