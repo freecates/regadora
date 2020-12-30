@@ -19,7 +19,6 @@ const Qui = ({ data }) => {
         >
             <div className={styles.container}>
                 <main className={styles.main}>
-                    <h1 className={styles.title}>{title}</h1>
                     <section className={styles.grid}>
                         <Card data={cardData} files={cardFiles} />
                         <h2
