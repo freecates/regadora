@@ -24,7 +24,7 @@ const Card = ({ data, files }) => {
                 files
                     .filter((x) => x.id == d.logo)
                     .map((f) => (
-                        <p className={styles.fadeIn} key={f.private_hash}>
+                        <div className={styles.fadeIn} key={f.private_hash}>
                             <Image
                                 width={f.width}
                                 height={f.height}
@@ -33,7 +33,7 @@ const Card = ({ data, files }) => {
                                 src={f.data.full_url}
                                 quality={75}
                             />
-                        </p>
+                        </div>
                     ))}
         </div>
     ));
