@@ -35,6 +35,21 @@
         line-height: 1.5;
     }
 
+    .iconWrapper {
+        display: inline-block;
+        line-height: 1;
+        width: 18.5px;
+        height: 18.5px;
+
+        svg {
+            max-height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            vertical-align: bottom;
+        }
+    }
+
     .fadeIn {
         animation-name: fadeIn;
         animation-duration: 1.3s;
