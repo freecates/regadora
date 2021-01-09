@@ -4,7 +4,7 @@ import Layout from '@components/layout';
 import Card from '@components/card';
 
 const Qui = ({ data }) => {
-    const { title, description, content, footer, siteTitle, routes, entities, files } = data;
+    const { title, description, content, footer, siteTitle, routes, entities, files, claim } = data;
    
     const cardData = [...entities.data];
     const cardFiles = [...files.data];
@@ -16,6 +16,7 @@ const Qui = ({ data }) => {
             footer={footer}
             pageTitle={title}
             pageDescription={description}
+            claim={claim}
         >
             <div className={styles.container}>
                 <main className={styles.main}>

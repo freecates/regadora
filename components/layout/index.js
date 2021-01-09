@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from './Layout.module.scss';
 import Nav from '@components/nav';
 import Footer from '@components/footer';
+import SocialNetworksSupport from '@components/socialnetworkssupport';
 
 const Layout = (props) => {
     return (
@@ -22,6 +23,9 @@ const Layout = (props) => {
             </Head>
             <Nav title={props.title} navRoutes={props.navRoutes} />
             <div>{props.children}</div>
+            <div className={styles.container}>
+                <SocialNetworksSupport title={props.title} claim={props.claim} />
+            </div>
             <div className={styles.container}>
                 <Footer footer={props.footer} />
             </div>

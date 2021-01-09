@@ -7,7 +7,7 @@ const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
 const Home = ({ common, routes, presentacio, perque }) => {
 
-    const { footer, siteTitle } = common;
+    const { footer, siteTitle, claim } = common;
 
     const { title: presentacioTitle, content: presentacioContent } = presentacio;
 
@@ -20,6 +20,7 @@ const Home = ({ common, routes, presentacio, perque }) => {
             footer={footer}
             pageTitle={presentacioTitle}
             pageDescription={presentacioTitle}
+            claim={claim}
         >
             <h1 className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn}`}>
                 <Image

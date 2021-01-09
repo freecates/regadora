@@ -1,0 +1,24 @@
+.socialNetworks {
+    text-align: center;
+    p {
+        small {
+            text-transform: uppercase;
+        }
+    }
+
+    .someNetwork {
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 20px;
+        text-align: center;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .someNetworkButton {
+            border: none;
+        }
+    }
+}

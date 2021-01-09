@@ -12,7 +12,7 @@ const Home = ({ regadora, common, routes }) => {
         where, when, claim
     } = regadora;
 
-    const { footer, siteTitle } = common;
+    const { footer, siteTitle, claim: SocialNetworkClaim } = common;
 
     return (
         <Layout
@@ -21,6 +21,7 @@ const Home = ({ regadora, common, routes }) => {
             footer={footer}
             pageTitle={regadoraTitle}
             pageDescription={regadoraDescription}
+            claim={SocialNetworkClaim}
             home
         >
             <h1 className={`${styles.title} ${styles.home} ${styles.background} ${styles.mainImageContainer}`}>{regadoraTitle}
