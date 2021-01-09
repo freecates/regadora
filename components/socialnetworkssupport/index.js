@@ -15,6 +15,7 @@ const EmailIcon = generateShareIcon('email');
 
 const SocialNetworksSupport = ({ title, claim }) => {
     const url = 'https://regadora.cat';
+    const supportQuote = `Dono el meu suport al ${title}: ${claim}`;
     return (
         <section className={styles.socialNetworks}>
             <div>
@@ -27,7 +28,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
                 <FacebookShareButton
                     url={url}
                     className={styles.someNetworkButton}
-                    quote={`${title}: ${claim}`}
+                    quote={supportQuote}
                     hashtag={`#FestivalRegagora`}
                 >
                     <FacebookIcon size={32} round />
@@ -37,7 +38,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
             <div className={styles.someNetwork}>
                 <TwitterShareButton
                     url={url}
-                    title={`${title}: ${claim}`}
+                    title={supportQuote}
                     hashtags={['FestivalRegagora']}
                     className={styles.someNetworkButton}
                 >
@@ -48,7 +49,8 @@ const SocialNetworksSupport = ({ title, claim }) => {
             <div className={styles.someNetwork}>
                 <LinkedinShareButton
                     url={url}
-                    title={`${title}: ${claim}`}
+                    title={supportQuote}
+                    hashtags={['FestivalRegagora']}
                     className={styles.someNetworkButton}
                 >
                     <LinkedinIcon size={32} round />
@@ -58,7 +60,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
             <div className={styles.someNetwork}>
                 <EmailShareButton
                     url={url}
-                    subject={`${title}: ${claim}`}
+                    subject={supportQuote}
                     body={`Fes-li un cop d'ull a: ${title}: ${claim} | ${url}`}
                     className={styles.someNetworkButton}
                 >
