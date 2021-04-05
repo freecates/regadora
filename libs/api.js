@@ -1,6 +1,8 @@
 const baseUrl = process.env.BASE_URL;
 const directusUrl= process.env.DIRECTUS_URL;
 
+console.log('directusUrl ', directusUrl);
+
 const api = {
   regadora: {
     async getData() {
