@@ -1,0 +1,26 @@
+@import 'styles/colors';
+
+.button {
+    width: 100%;
+    display: block;
+
+    a,
+    button {
+        display: block;
+        text-align: center;
+        width: 100%;
+        background: lighten($main-dark-blue, 5%);
+        color: $white;
+        text-transform: uppercase;
+        padding: .5rem;
+        border-radius: .25rem;
+        transition: background ease .25s;
+        border: none;
+        font: inherit;
+
+        &:hover {
+            background: $main-dark-blue;
+            cursor: pointer;
+        }
+    }
+}

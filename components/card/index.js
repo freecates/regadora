@@ -6,7 +6,9 @@ const Card = ({ data, files }) => {
         <div className={styles.card} key={index + d.id}>
             <h3>
                 {!d.web ? (
-                    d.nom
+                    <span>
+                        {d.nom} {d.cognoms && d.cognoms}
+                    </span>
                 ) : (
                     <a
                         href={d.web}

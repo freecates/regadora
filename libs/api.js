@@ -30,6 +30,13 @@ const api = {
       return data;
     }
   },
+  adhesions: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/adhesions.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
   common: {
     async getData() {
       const response = await fetch(`${baseUrl}/common.json`);
@@ -47,6 +54,13 @@ const api = {
   entities: {
     async getData() {
       const response = await fetch(`${directusUrl}/items/entitats`);
+      const data = await response.json();
+      return data;
+    }
+  },
+  supporters: {
+    async getData() {
+      const response = await fetch(`${directusUrl}/items/adhesions_manifest`);
       const data = await response.json();
       return data;
     }
