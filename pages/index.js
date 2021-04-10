@@ -1,6 +1,7 @@
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
+import Button from '@components/button';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
@@ -25,7 +26,7 @@ const Home = ({ regadora, common, routes }) => {
             home
         >
             <h1 className={`${styles.title} ${styles.home} ${styles.background} ${styles.mainImageContainer}`}>{regadoraTitle}
-                <br/><small>{claim}</small>
+                <br /><small>{claim}</small>
             </h1>
             <div className={styles.container}>
                 <main className={`${styles.main} ${styles.home}`}>
@@ -35,6 +36,9 @@ const Home = ({ regadora, common, routes }) => {
                         />
                         <h2>{regadoraContent.claim}</h2>
                         <p className={styles.description}>{where} | {when}</p>
+                        <div className={styles.wrapper}>
+                            <Button name={'adhesions'} type={'anchor'} url={'/adhesions'} />
+                        </div>
                     </section>
                 </main>
             </div>
