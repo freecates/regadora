@@ -1,8 +1,12 @@
-module.exports = {
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
+
+module.exports = withPWA({
     images: {
         domains: ['regadora-data.vercel.app', '68.183.219.78'],
     },
-    future: {
-        webpack5: true,
+    pwa: {
+        dest: 'public',
+        runtimeCaching,
     },
-};
+});

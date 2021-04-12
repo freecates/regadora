@@ -8,6 +8,15 @@ const Layout = (props) => {
     return (
         <>
             <Head>
+                <meta charSet="utf-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                name="viewport"
+                content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+                />
+                <meta name="theme-color" content="#ffffff"/>
+                <link rel="apple-touch-icon" href="/icons/icon-192x192.png"></link>
+                <link rel="manifest" href="/manifest.json" />
                 <title>
                     {!props.home ? props.pageTitle + ' | ' + props.title : props.pageTitle}
                 </title>
