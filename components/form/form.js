@@ -24,7 +24,6 @@ const Form = () => {
 
         const result = await res.json();
         setResultData(result.data.nom);
-        console.log(result);
     };
 
     return (
