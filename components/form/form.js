@@ -59,7 +59,7 @@ const Form = () => {
                     <Button type={'submit'} name={'adheriu-me'} />
                 </form>
             ) : (
-                <p>Gràcies, {resultData}, per adherir-vos-hi!</p>
+                <p className={styles.thanks}>Gràcies, <strong>{resultData}</strong>, per adherir-vos-hi! Revisarem la vostra petició, abans de publicar-la.</p>
             )}
         </div>
     );
