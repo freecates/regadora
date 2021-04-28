@@ -1,10 +1,13 @@
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
+import MDFileContent from '@components/mdncontentparser';
 import List from '@components/list';
 import Form from '@components/form/form';
 
-const Adhesions = ({ data }) => {
+const baseUrl = process.env.BASE_URL;
+
+const Adhesions = ({ data, mdFileContent }) => {
     const {
         title,
         subtitle,
@@ -32,7 +35,10 @@ const Adhesions = ({ data }) => {
                 <main className={styles.main}>
                     <section className={styles.grid}>
                         <div className={styles.wrapper}>
+                            <h1 className={`${styles.title} ${styles.page}`}>Manifest</h1>
+                            <MDFileContent content={mdFileContent} />
                             <p
+                                id={'form'}
                                 className={styles.description}
                                 dangerouslySetInnerHTML={{ __html: content.description }}
                             />
@@ -61,11 +67,17 @@ export const getStaticProps = async () => {
         api.routes.getData(),
         api.supporters.getData(),
     ]);
+
+    const res = await fetch(`${baseUrl}/manifest.md`);
+    const mdFileContent = await res.text();
+
     const DATA = supporters.data;
     const supportersData = DATA.filter((x) => x.status === 'published');
+
     return {
         props: {
             data: { ...adhesions[0], ...common[0], routes, supportersData },
+            mdFileContent: mdFileContent,
         },
         revalidate: 1,
     };
