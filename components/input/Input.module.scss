@@ -16,5 +16,11 @@
         border-radius: .25rem;
         border: none;
         font: inherit;
+
+        &[type=checkbox] {
+            width: unset;
+            margin-right: 1rem;
+            float: left;
+        }
     }
 }

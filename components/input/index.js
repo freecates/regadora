@@ -1,6 +1,16 @@
 import styles from './Input.module.scss';
 
-const Input = ({ id, name, type, autoComplete, required, placeholder, pattern, title }) => {
+const Input = ({
+    id,
+    name,
+    type,
+    autoComplete,
+    required,
+    placeholder,
+    pattern,
+    title,
+    onClick,
+}) => {
     return (
         <div className={styles.input}>
             <label htmlFor={id}>{name}</label>
@@ -13,6 +23,7 @@ const Input = ({ id, name, type, autoComplete, required, placeholder, pattern, t
                 placeholder={placeholder}
                 pattern={pattern}
                 title={title}
+                onClick={() => onClick && onClick()}
             />
         </div>
     );

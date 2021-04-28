@@ -160,3 +160,19 @@
     width: 100%;
     margin-bottom: 2rem;
 }
+
+.isMobile {
+    display: block;
+
+    @media (min-width: 568px) {
+        display: none;
+    }
+}
+
+.isDesktop {
+    display: none;
+
+    @media (min-width: 568px) {
+        display: block;
+    }
+}
