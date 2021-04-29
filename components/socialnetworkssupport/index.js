@@ -39,8 +39,9 @@ const SocialNetworksSupport = ({ title, claim }) => {
                 <TwitterShareButton
                     url={url}
                     title={supportQuote}
-                    hashtags={['FestivalRegagora']}
+                    hashtags={['FestivalRegagora', 'QuinPlanetaEtDeixem', 'CanviaElSistemaNoElClima']}
                     className={styles.someNetworkButton}
+                    via={'regadorafest'}
                 >
                     <TwitterIcon size={32} round />
                 </TwitterShareButton>
@@ -50,7 +51,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
                 <LinkedinShareButton
                     url={url}
                     title={supportQuote}
-                    hashtags={['FestivalRegagora']}
+                    hashtags={['FestivalRegagora', 'QuinPlanetaEtDeixem', 'CanviaElSistemaNoElClima']}
                     className={styles.someNetworkButton}
                 >
                     <LinkedinIcon size={32} round />
