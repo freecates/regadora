@@ -44,7 +44,7 @@ const Layout = (props) => {
                             ? props.pageDescription + ' | ' + props.title
                             : props.pageDescription
                     }
-                /><meta name='twitter:image:src' content={'/tampo-color-regadora.jpg'} />
+                /><meta name='twitter:image:src' content={'https://regadora.cat/tampo-color-regadora.jpg'} />
             </Head>
             <Nav title={props.title} navRoutes={props.navRoutes} />
             <div>{props.children}</div>
