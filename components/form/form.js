@@ -54,7 +54,7 @@ const Form = () => {
                     />
                     <Input
                         id='mostra_el_meu_nom'
-                        name='Voleu que mostrem el vostre nom?'
+                        name="Voleu mostrar el vostre nom al llistat d'adherits?"
                         type='checkbox'
                         autoComplete=''
                         placeholder=''
