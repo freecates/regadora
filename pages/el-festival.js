@@ -1,6 +1,6 @@
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
-import Image from 'next/image';
+
 import Layout from '@components/layout';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
@@ -23,7 +23,7 @@ const Home = ({ common, routes, presentacio, perque }) => {
             claim={claim}
         >
             <h1 className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn}`}>
-                <Image
+                <img
                     width='2362'
                     height='1181'
                     loading='lazy'

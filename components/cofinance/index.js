@@ -1,5 +1,5 @@
 import styles from './Cofinance.module.scss';
-import Image from 'next/image';
+
 
 const url = 'https://ca.goteo.org/project/regadora';
 const name = 'Goteo: Regadora, la ciutat de les alternatives';
@@ -11,7 +11,7 @@ const Cofinance = () => (
         </p>
         <p>
             <a href={url} target='_blank' rel='noopener noreferrer' title={name}>
-                <Image width='132' height='40' alt={name} src='/goteo-white.svg' />
+                <img width='132' height='40' alt={name} src='/goteo-white.svg' />
             </a>
         </p>
     </div>

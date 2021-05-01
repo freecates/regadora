@@ -1,5 +1,5 @@
 import styles from '@styles/Home.module.scss';
-import Image from 'next/image';
+
 import api from '@libs/api.js';
 import Layout from '@components/layout';
 import Button from '@components/button';
@@ -31,7 +31,7 @@ const Home = ({ regadora, common, routes }) => {
             <h1
                 className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn} ${styles.isMobile} ${styles.background}`}
             >
-                <Image
+                <img
                     width='320'
                     height='480'
                     loading='lazy'
@@ -42,7 +42,7 @@ const Home = ({ regadora, common, routes }) => {
             <h1
                 className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn} ${styles.isDesktop} ${styles.background}`}
             >
-                <Image
+                <img
                     width='1680'
                     height='230'
                     loading='lazy'

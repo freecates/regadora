@@ -1,9 +1,9 @@
 import styles from './Card.module.scss';
-import Image from 'next/image';
+
 
 const Card = ({ data, files }) => {
     return data.map((d, index) => (
-        <div className={styles.card} key={index + d.id}>
+        <div className={styles.card} key={`${index}-${d.id}`}>
             <h3>
                 {!d.web ? (
                     <span>
@@ -35,13 +35,12 @@ const Card = ({ data, files }) => {
                     .filter((x) => x.id == d.logo)
                     .map((f) => (
                         <div className={styles.fadeIn} key={f.private_hash}>
-                            <Image
+                            <img
                                 width={f.width}
                                 height={f.height}
                                 loading='lazy'
                                 alt={f.title}
                                 src={f.data.full_url}
-                                quality={75}
                             />
                         </div>
                     ))}
