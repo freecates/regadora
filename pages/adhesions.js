@@ -17,10 +17,12 @@ const Adhesions = ({ data, mdFileContent }) => {
         siteTitle,
         routes,
         supportersData,
+        supportersDataEntities,
         claim,
     } = data;
 
     const listData = supportersData;
+    const listDataEntities = supportersDataEntities;
 
     return (
         <Layout
@@ -44,15 +46,24 @@ const Adhesions = ({ data, mdFileContent }) => {
                             />
                             <Form />
                         </div>
-                        {listData && listData.length ? (
-                            <>
-                                <h2
-                                    className={styles.description}
-                                    dangerouslySetInnerHTML={{ __html: subtitle }}
-                                />
-                                <List data={listData} />
-                            </>
-                        ) : null}
+                        <div>
+                            <h2
+                                className={styles.description}
+                                dangerouslySetInnerHTML={{ __html: subtitle }}
+                            />
+                            {listData && listData.length ? (
+                                <>
+                                    <h3>Particulars</h3>
+                                    <List data={listData} />
+                                </>
+                            ) : null}
+                            {listDataEntities && listDataEntities.length ? (
+                                <>
+                                    <h3>Entitats</h3>
+                                    <List data={listDataEntities} />
+                                </>
+                            ) : null}
+                        </div>
                     </section>
                 </main>
             </div>
@@ -72,11 +83,12 @@ export const getStaticProps = async () => {
     const mdFileContent = await res.text();
 
     const DATA = supporters.data;
-    const supportersData = DATA.filter((x) => x.status === 'published');
+    const supportersData = DATA.filter((x) => x.es_entitat === false);
+    const supportersDataEntities = DATA.filter((x) => x.es_entitat === true);
 
     return {
         props: {
-            data: { ...adhesions[0], ...common[0], routes, supportersData },
+            data: { ...adhesions[0], ...common[0], routes, supportersData, supportersDataEntities },
             mdFileContent: mdFileContent,
         },
         revalidate: 1,
