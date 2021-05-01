@@ -20,5 +20,8 @@
         .someNetworkButton {
             border: none;
         }
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
