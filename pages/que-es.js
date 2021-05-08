@@ -5,13 +5,11 @@ import Layout from '@components/layout';
 
 const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
 
-const Home = ({ common, routes, presentacio, perque }) => {
+const QueEs = ({ common, routes, presentacio }) => {
 
     const { footer, siteTitle, claim } = common;
 
-    const { title: presentacioTitle, content: presentacioContent } = presentacio;
-
-    const { title: perqueTitle, content: perqueContent, mainImage: perqueMainImage } = perque;
+    const { title: presentacioTitle, content: presentacioContent, mainImage: presentacioMainImage } = presentacio;
 
     return (
         <Layout
@@ -28,21 +26,16 @@ const Home = ({ common, routes, presentacio, perque }) => {
                     height='1181'
                     loading='lazy'
                     alt={presentacioTitle}
-                    src={`${assetsURL}${perqueMainImage}`}
+                    src={`${assetsURL}${presentacioMainImage}`}
                 />
             </h1>
             <div className={styles.container}>
-                <main className={`${styles.main} ${styles.home}`}>
+                <main className={`${styles.main} ${styles.QueEs}`}>
                     <section className={styles.grid}>
                         <h2>{presentacioTitle}</h2>
                         <div
                             className='description'
                             dangerouslySetInnerHTML={{ __html: presentacioContent.description }}
-                        />
-                        <h2>{perqueTitle}</h2>
-                        <div
-                            className='description'
-                            dangerouslySetInnerHTML={{ __html: perqueContent.description }}
                         />
                     </section>
                 </main>
@@ -52,20 +45,18 @@ const Home = ({ common, routes, presentacio, perque }) => {
 };
 
 export const getStaticProps = async () => {
-    const [common, routes, presentacio, perque] = await Promise.all([
+    const [common, routes, presentacio] = await Promise.all([
         api.common.getData(),
         api.routes.getData(),
         api.presentacio.getData(),
-        api.perque.getData(),
     ]);
     return {
         props: {
             common: { ...common[0] },
             routes,
             presentacio: { ...presentacio[0] },
-            perque: {...perque[0]},
         },
     };
 };
 
-export default Home;
+export default QueEs;
