@@ -17,7 +17,7 @@ const EmailIcon = generateShareIcon('email');
 const SocialNetworksSupport = ({ title, claim }) => {
     const router = useRouter();
     const url = `https://regadora.cat${router.pathname}`;
-    const supportQuote = `Dono el meu suport al ${title}: ${claim}`;
+    const supportQuote = `Dono el meu suport a ${title}: ${claim}`;
     return (
         <section className={styles.socialNetworks}>
             <div>
