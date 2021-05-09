@@ -80,6 +80,7 @@ export const getStaticProps = async () => {
             common: { ...common[0] },
             routes,
         },
+        revalidate: 1,
     };
 };
 

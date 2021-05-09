@@ -56,6 +56,7 @@ export const getStaticProps = async () => {
             routes,
             presentacio: { ...presentacio[0] },
         },
+        revalidate: 1,
     };
 };
 
