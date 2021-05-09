@@ -51,6 +51,13 @@ const api = {
       return data;
     }
   },
+  carouselImages: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/carouselImages.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
   entities: {
     async getData() {
       const response = await fetch(`${directusUrl}/items/entitats`);

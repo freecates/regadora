@@ -3,10 +3,14 @@ import Image from 'next/image';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
 import Button from '@components/button';
+import dynamic from 'next/dynamic'
 
-const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
+const CarouselNoSSR = dynamic(
+  () => import('@components/imagecarousel'),
+  { ssr: false }
+)
 
-const Home = ({ regadora, common, routes }) => {
+const Home = ({ regadora, common, routes, carouselImages }) => {
     const {
         title: regadoraTitle,
         description: regadoraDescription,
@@ -50,6 +54,7 @@ const Home = ({ regadora, common, routes }) => {
                     src={`/capcalera-web-regadora.jpg`}
                 />
             </h1>
+            <CarouselNoSSR images={carouselImages} />
             <div className={styles.container}>
                 <main className={`${styles.main} ${styles.home}`}>
                     <section className={styles.grid}>
@@ -69,16 +74,18 @@ const Home = ({ regadora, common, routes }) => {
 };
 
 export const getStaticProps = async () => {
-    const [regadora, common, routes] = await Promise.all([
+    const [regadora, common, routes, carouselImages] = await Promise.all([
         api.regadora.getData(),
         api.common.getData(),
         api.routes.getData(),
+        api.carouselImages.getData(),
     ]);
     return {
         props: {
             regadora: { ...regadora[0] },
             common: { ...common[0] },
             routes,
+            carouselImages,
         },
         revalidate: 1,
     };
