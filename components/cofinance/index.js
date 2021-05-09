@@ -9,11 +9,11 @@ const Cofinance = () => (
         <p>
             <small>Cofinancia el projecte</small>
         </p>
-        <p>
+        <div>
             <a href={url} target='_blank' rel='noopener noreferrer' title={name}>
                 <Image width='132' height='40' alt={name} src='/goteo-white.svg' />
             </a>
-        </p>
+        </div>
     </div>
 );
 
