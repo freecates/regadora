@@ -51,7 +51,7 @@ const ImageCarousel = ({ images }) => {
                     className={`${styles.fader__slide}`}
                     style={{ opacity: opacities[idx] }}
                 >
-                    <img src={i.src} alt={i.alt} loading={'lazy'} height={1280} width={1920} />
+                    <img src={i.src} alt={i.alt} loading={'lazy'} height={1365} width={2048} />
                 </div>
             ))}
         </div>
