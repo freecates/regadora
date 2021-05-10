@@ -9,7 +9,7 @@
         display: block;
         text-align: center;
         width: 100%;
-        background: lighten($main-dark-blue, 5%);
+        background: $secondary-red;
         color: $white;
         text-transform: uppercase;
         padding: .5rem;
@@ -20,7 +20,7 @@
         font-weight: 900;
 
         &:hover {
-            background: $main-dark-blue;
+            background: darken($secondary-red, 10%);
             cursor: pointer;
         }
     }
