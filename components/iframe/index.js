@@ -1,16 +1,16 @@
 import styles from './Iframe.module.scss';
+import ReactPlayer from 'react-player/vimeo'
 
-const Iframe = ({ width, height, src, allow, allowfullscreen }) => {
+const Iframe = ({ width, height, src }) => {
     return (
         <div className={styles.iframeWrapper}>
-            <iframe
+            <ReactPlayer
                 className={styles.iframe}
-                src={src}
+                url={src}
                 width={width}
                 height={height}
-                frameborder='0'
-                allow={allow}
-                allowFullScreen={allowfullscreen}
+                controls={true}
+                light={true}
             />
         </div>
     );
