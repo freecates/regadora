@@ -1,15 +1,15 @@
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
-import Image from 'next/image';
 import Layout from '@components/layout';
-
-const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
+import Iframe from '@components/iframe';
 
 const QueEs = ({ common, routes, presentacio }) => {
-
     const { footer, siteTitle, claim } = common;
 
-    const { title: presentacioTitle, content: presentacioContent, mainImage: presentacioMainImage } = presentacio;
+    const {
+        title: presentacioTitle,
+        content: presentacioContent,
+    } = presentacio;
 
     return (
         <Layout
@@ -20,13 +20,15 @@ const QueEs = ({ common, routes, presentacio }) => {
             pageDescription={presentacioTitle}
             claim={claim}
         >
-            <h1 className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn}`}>
-                <Image
-                    width='2362'
-                    height='1181'
-                    loading='lazy'
-                    alt={presentacioTitle}
-                    src={`${assetsURL}${presentacioMainImage}`}
+            <h1
+                className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn}`}
+            >
+                <Iframe
+                    src='https://player.vimeo.com/video/542095976?color=8fbeae'
+                    width='2048'
+                    height='1152'
+                    allow='autoplay; fullscreen; picture-in-picture'
+                    allowfullscreen
                 />
             </h1>
             <div className={styles.container}>
