@@ -60,7 +60,7 @@ const Home = ({ regadora, common, routes, carouselImages }) => {
                     <section className={styles.grid}>
                         <h2 dangerouslySetInnerHTML={{ __html: regadoraContent.description }} />
                         <h2>{regadoraContent.claim}</h2>
-                        <p className={styles.description}>
+                        <p className={`${styles.description} ${styles.center}`}>
                             {where} | {when}
                         </p>
                         <div className={styles.wrapper}>

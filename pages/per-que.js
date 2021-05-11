@@ -30,11 +30,11 @@ const PerQue = ({ common, routes, perque }) => {
                 />
             </h1>
             <div className={styles.container}>
-                <main className={`${styles.main} ${styles.PerQue}`}>
+                <main className={`${styles.main} ${styles.home}`}>
                     <section className={styles.grid}>
                         <h2>{perqueTitle}</h2>
                         <div
-                            className='description'
+                            className={styles.description}
                             dangerouslySetInnerHTML={{ __html: perqueContent.description }}
                         />
                     </section>

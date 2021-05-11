@@ -70,7 +70,7 @@
 }
 
 .title,
-.description {
+.center {
     text-align: center;
 }
 
@@ -80,6 +80,11 @@
     width: 100%;
     p {
         padding: 1rem;
+
+        a {
+            text-decoration: underline;
+            font-weight: bold;
+        }
     }
 }
 

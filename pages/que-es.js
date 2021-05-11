@@ -32,11 +32,11 @@ const QueEs = ({ common, routes, presentacio }) => {
                 />
             </h1>
             <div className={styles.container}>
-                <main className={`${styles.main} ${styles.QueEs}`}>
+                <main className={`${styles.main} ${styles.home}`}>
                     <section className={styles.grid}>
                         <h2>{presentacioTitle}</h2>
                         <div
-                            className='description'
+                            className={styles.description}
                             dangerouslySetInnerHTML={{ __html: presentacioContent.description }}
                         />
                     </section>
