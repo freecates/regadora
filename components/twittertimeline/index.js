@@ -10,7 +10,7 @@ const TwitterTimeline = ({ id }) => {
 
     return (
         <>
-            <a class='twitter-timeline' href={`https://twitter.com/${id}?ref_src=twsrc%5Etfw`}>
+            <a className='twitter-timeline' href={`https://twitter.com/${id}?ref_src=twsrc%5Etfw`}>
                 Piulades de {id}
             </a>{' '}
             <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>

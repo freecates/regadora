@@ -3,8 +3,7 @@ import Image from 'next/image';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
 import Button from '@components/button';
-import dynamic from 'next/dynamic'
-import TwitterTimeline from '@components/twittertimeline';
+import dynamic from 'next/dynamic';
 
 const CarouselNoSSR = dynamic(
   () => import('@components/imagecarousel'),
@@ -68,7 +67,6 @@ const Home = ({ regadora, common, routes, carouselImages }) => {
                             <Button name={'adhesions'} type={'anchor'} url={'/adhesions'} />
                         </div>
                     </section>
-                        <TwitterTimeline id={'regadorafest'} />
                 </main>
             </div>
         </Layout>
