@@ -37,6 +37,13 @@ const api = {
       return data;
     }
   },
+  novetats: {
+    async getData() {
+      const response = await fetch(`${baseUrl}/novetats.json`);
+      const data = await response.json();
+      return data;
+    }
+  },
   common: {
     async getData() {
       const response = await fetch(`${baseUrl}/common.json`);

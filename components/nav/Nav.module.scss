@@ -59,9 +59,9 @@
                     a {
                         padding: 0.25rem 0;
                         transition: color ease 1s;
-                        font-size: 0.85rem;
+                        font-size: 0.65rem;
 
-                        @media (min-width: 768px) {
+                        @media (min-width: 1024px) {
                             font-size: 1rem;
                         }
 
