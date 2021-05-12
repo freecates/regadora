@@ -1,11 +1,11 @@
-import styles from './Iframe.module.scss';
+import styles from './VimeoPlayer.module.scss';
 import ReactPlayer from 'react-player/vimeo'
 
-const Iframe = ({ width, height, src }) => {
+const VimeoPlayer = ({ width, height, src }) => {
     return (
-        <div className={styles.iframeWrapper}>
+        <div className={styles.vimeoPlayerWrapper}>
             <ReactPlayer
-                className={styles.iframe}
+                className={styles.vimeoPlayer}
                 url={src}
                 width={width}
                 height={height}
@@ -16,4 +16,4 @@ const Iframe = ({ width, height, src }) => {
     );
 };
 
-export default Iframe;
+export default VimeoPlayer;

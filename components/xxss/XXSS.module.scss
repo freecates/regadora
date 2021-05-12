@@ -1,0 +1,15 @@
+@import 'styles/colors';
+
+.xxss {
+    text-align: center;
+    
+    p {
+        small {
+            text-transform: uppercase;
+        }
+    }
+    span {
+        color: $secondary-red;
+        font-size: 2rem;
+    }
+}

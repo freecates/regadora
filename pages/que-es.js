@@ -1,7 +1,7 @@
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
-import Iframe from '@components/iframe';
+import VimeoPlayer from '@components/vimeoplayer';
 
 const QueEs = ({ common, routes, presentacio }) => {
     const { footer, siteTitle, claim } = common;
@@ -23,7 +23,7 @@ const QueEs = ({ common, routes, presentacio }) => {
             <h1
                 className={`${styles.title} ${styles.page} ${styles.mainImageContainer} ${styles.fadeIn}`}
             >
-                <Iframe
+                <VimeoPlayer
                     src='https://player.vimeo.com/video/542095976?color=8fbeae'
                     width='2048'
                     height='1152'

@@ -4,6 +4,7 @@ import Nav from '@components/nav';
 import Footer from '@components/footer';
 import SocialNetworksSupport from '@components/socialnetworkssupport';
 import Cofinance from '@components/cofinance';
+import XXSS from '@components/xxss';
 
 const Layout = (props) => {
     return (
@@ -52,6 +53,7 @@ const Layout = (props) => {
             <div className={styles.container}>
                 <SocialNetworksSupport title={props.title} claim={props.claim} />
                 <Cofinance />
+                <XXSS />
             </div>
             <div className={styles.container}>
                 <Footer footer={props.footer} />
