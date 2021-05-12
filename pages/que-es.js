@@ -29,6 +29,7 @@ const QueEs = ({ common, routes, presentacio }) => {
                     height='1152'
                     allow='autoplay; fullscreen; picture-in-picture'
                     allowfullscreen
+                    thumbnail={'/regadora-vimeo-bg.jpg'}
                 />
             </h1>
             <div className={styles.container}>

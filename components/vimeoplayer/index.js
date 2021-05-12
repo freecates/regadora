@@ -1,7 +1,7 @@
 import styles from './VimeoPlayer.module.scss';
 import ReactPlayer from 'react-player/vimeo'
 
-const VimeoPlayer = ({ width, height, src }) => {
+const VimeoPlayer = ({ width, height, src, thumbnail }) => {
     return (
         <div className={styles.vimeoPlayerWrapper}>
             <ReactPlayer
@@ -10,7 +10,7 @@ const VimeoPlayer = ({ width, height, src }) => {
                 width={width}
                 height={height}
                 controls={true}
-                light={true}
+                light={thumbnail}
             />
         </div>
     );
