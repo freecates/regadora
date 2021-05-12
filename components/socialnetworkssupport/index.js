@@ -2,12 +2,8 @@ import { generateShareIcon, ShareButtons } from 'react-share';
 import styles from './SocialNetworksSupport.module.scss';
 import { useRouter } from 'next/router';
 
-const {
-    FacebookShareButton,
-    LinkedinShareButton,
-    TwitterShareButton,
-    EmailShareButton,
-} = ShareButtons;
+const { FacebookShareButton, LinkedinShareButton, TwitterShareButton, EmailShareButton } =
+    ShareButtons;
 
 const FacebookIcon = generateShareIcon('facebook');
 const TwitterIcon = generateShareIcon('twitter');
@@ -35,6 +31,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
                     role={'button'}
                 >
                     <FacebookIcon size={32} round />
+                    <span className={styles['visually-hidden']}>Facebook Share Button</span>
                 </FacebookShareButton>
             </div>
 
@@ -42,12 +39,17 @@ const SocialNetworksSupport = ({ title, claim }) => {
                 <TwitterShareButton
                     url={url}
                     title={supportQuote}
-                    hashtags={['FestivalRegagora', 'QuinPlanetaEtDeixem', 'CanviaElSistemaNoElClima']}
+                    hashtags={[
+                        'FestivalRegagora',
+                        'QuinPlanetaEtDeixem',
+                        'CanviaElSistemaNoElClima',
+                    ]}
                     className={styles.someNetworkButton}
                     via={'regadorafest'}
                     role={'button'}
                 >
                     <TwitterIcon size={32} round />
+                    <span className={styles['visually-hidden']}>Twitter Share Button</span>
                 </TwitterShareButton>
             </div>
 
@@ -55,11 +57,16 @@ const SocialNetworksSupport = ({ title, claim }) => {
                 <LinkedinShareButton
                     url={url}
                     title={supportQuote}
-                    hashtags={['FestivalRegagora', 'QuinPlanetaEtDeixem', 'CanviaElSistemaNoElClima']}
+                    hashtags={[
+                        'FestivalRegagora',
+                        'QuinPlanetaEtDeixem',
+                        'CanviaElSistemaNoElClima',
+                    ]}
                     className={styles.someNetworkButton}
                     role={'button'}
                 >
                     <LinkedinIcon size={32} round />
+                    <span className={styles['visually-hidden']}>Linkedin Share Button</span>
                 </LinkedinShareButton>
             </div>
 
@@ -72,6 +79,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
                     role={'button'}
                 >
                     <EmailIcon size={32} round />
+                    <span className={styles['visually-hidden']}>Email Share Button</span>
                 </EmailShareButton>
             </div>
         </section>
