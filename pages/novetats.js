@@ -27,7 +27,7 @@ const Novetats = ({ common, routes, novetats }) => {
                             dangerouslySetInnerHTML={{ __html: novetatsContent.description }}
                         />
 
-                        <TwitterTimeline id={'regadorafest'} />
+                        <TwitterTimeline id={'laregadora2021'} />
                     </section>
                 </main>
             </div>
