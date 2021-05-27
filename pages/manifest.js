@@ -7,7 +7,7 @@ import Form from '@components/form/form';
 
 const baseUrl = process.env.BASE_URL;
 
-const Adhesions = ({ data, mdFileContent }) => {
+const Manifest = ({ data, mdFileContent }) => {
     const {
         title,
         subtitle,
@@ -95,4 +95,4 @@ export const getStaticProps = async () => {
     };
 };
 
-export default Adhesions;
+export default Manifest;
