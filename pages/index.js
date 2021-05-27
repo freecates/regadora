@@ -64,7 +64,7 @@ const Home = ({ regadora, common, routes, carouselImages }) => {
                             {where} | {when}
                         </p>
                         <div className={styles.wrapper}>
-                            <Button name={'manifest'} type={'anchor'} url={'/adhesions'} />
+                            <Button name={'adhesions'} type={'anchor'} url={'/manifest'} />
                         </div>
                     </section>
                 </main>
