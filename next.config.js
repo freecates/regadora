@@ -15,5 +15,15 @@ module.exports = withImages(
         future: {
             webpack5: true,
         },
+        
+        async redirects() {
+            return [
+              {
+                source: '/adhesions',
+                destination: '/manifest',
+                permanent: true,
+              },
+            ]
+          },
     })
 );
