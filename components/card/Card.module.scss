@@ -1,7 +1,7 @@
 @import 'styles/colors';
 
 .card {
-    background: transparentize($white, 0.25);
+    background: $white;
     margin: 1rem 0;
     flex-basis: 45%;
     width: 100%;
