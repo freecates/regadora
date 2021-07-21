@@ -6,18 +6,19 @@ import Button from '@components/button';
 import dynamic from 'next/dynamic';
 
 const CarouselNoSSR = dynamic(
-  () => import('@components/imagecarousel'),
-  { ssr: false }
-)
+    () => import('@components/imagecarousel'),
+    { ssr: false },
+);
 
-const Home = ({ regadora, common, routes, carouselImages }) => {
+const Home = ({
+    regadora, common, routes, carouselImages,
+}) => {
     const {
         title: regadoraTitle,
         description: regadoraDescription,
         content: regadoraContent,
         where,
         when,
-        claim,
     } = regadora;
 
     const { footer, siteTitle, claim: SocialNetworkClaim } = common;
@@ -40,7 +41,7 @@ const Home = ({ regadora, common, routes, carouselImages }) => {
                     height='480'
                     loading='lazy'
                     alt={'Camviem el sistema no el clima. Sabadell ciutat de les alternative'}
-                    src={`/capcalera-web-mobile-regadora.jpg`}
+                    src={'/capcalera-web-mobile-regadora.jpg'}
                 />
             </h1>
             <h1
@@ -51,7 +52,7 @@ const Home = ({ regadora, common, routes, carouselImages }) => {
                     height='230'
                     loading='lazy'
                     alt={'Camviem el sistema no el clima. Sabadell ciutat de les alternative'}
-                    src={`/capcalera-web-regadora.jpg`}
+                    src={'/capcalera-web-regadora.jpg'}
                 />
             </h1>
             <CarouselNoSSR images={carouselImages} />

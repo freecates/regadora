@@ -4,11 +4,13 @@ import Layout from '@components/layout';
 import Card from '@components/card';
 
 const Qui = ({ data }) => {
-    const { title, description, content, footer, siteTitle, routes, entities, files, claim } = data;
-   
+    const {
+        title, description, content, footer, siteTitle, routes, entities, files, claim,
+    } = data;
+
     const cardData = [...entities.data];
     const cardFiles = [...files.data];
-    
+
     return (
         <Layout
             title={siteTitle}
@@ -43,7 +45,9 @@ export const getStaticProps = async () => {
     ]);
     return {
         props: {
-            data: { ...quisom[0], ...common[0], routes, entities, files },
+            data: {
+                ...quisom[0], ...common[0], routes, entities, files,
+            },
         },
         revalidate: 1,
     };

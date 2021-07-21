@@ -17,7 +17,7 @@ const Novetats = ({ common, routes, novetats }) => {
             pageDescription={novetatsTitle}
             claim={claim}
         >
-            
+
             <div className={styles.container}>
                 <main className={`${styles.main} ${styles.home}`}>
                     <section className={styles.grid}>

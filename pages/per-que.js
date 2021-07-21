@@ -3,10 +3,9 @@ import api from '@libs/api.js';
 import Image from 'next/image';
 import Layout from '@components/layout';
 
-const assetsURL = `https://regadora-data.vercel.app/assets/images/`;
+const assetsURL = 'https://regadora-data.vercel.app/assets/images/';
 
 const PerQue = ({ common, routes, perque }) => {
-
     const { footer, siteTitle, claim } = common;
 
     const { title: perqueTitle, content: perqueContent, mainImage: perqueMainImage } = perque;
@@ -54,7 +53,7 @@ export const getStaticProps = async () => {
         props: {
             common: { ...common[0] },
             routes,
-            perque: {...perque[0]},
+            perque: { ...perque[0] },
         },
         revalidate: 1,
     };

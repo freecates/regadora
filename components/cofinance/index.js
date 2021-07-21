@@ -1,5 +1,5 @@
-import styles from './Cofinance.module.scss';
 import Image from 'next/image';
+import styles from './Cofinance.module.scss';
 
 const url = 'https://ca.goteo.org/project/regadora';
 const name = 'Goteo: Regadora, la ciutat de les alternatives';

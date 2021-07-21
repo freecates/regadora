@@ -1,7 +1,7 @@
 import Input from '@components/input';
 import Button from '@components/button';
-import styles from './Form.module.scss';
 import React from 'react';
+import styles from './Form.module.scss';
 
 const directusUrl = process.env.NEXT_PUBLIC_DIRECTUS_URL;
 
@@ -12,6 +12,7 @@ const Form = () => {
     const registerUser = async (event) => {
         event.preventDefault();
 
+        // eslint-disable-next-line no-undef
         const res = await fetch(`${directusUrl}/items/adhesions_manifest`, {
             body: JSON.stringify({
                 nom: event.target.nom.value,
@@ -28,7 +29,6 @@ const Form = () => {
         });
 
         const result = await res.json();
-        console.log('result ', result);
         if (!result.error) setResultData(true);
     };
 
