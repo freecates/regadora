@@ -1,5 +1,5 @@
-import styles from './XXSS.module.scss';
 import { FaInstagram, FaTwitter } from 'react-icons/fa';
+import styles from './XXSS.module.scss';
 
 const XXSS = () => (
     <div className={styles.xxss}>
@@ -9,7 +9,7 @@ const XXSS = () => (
         <div>
             <a
                 target='_blank'
-                rel={'noopener nofollow'}
+                rel={'noopener nofollow noreferrer'}
                 href='https://www.instagram.com/laregadora2021/'
                 title={"Anar a l'Instagram de la Regadora"}
             >
@@ -20,7 +20,7 @@ const XXSS = () => (
 
             <a
                 target='_blank'
-                rel={'noopener nofollow'}
+                rel={'noopener nofollow noreferrer'}
                 href='https://twitter.com/regadorafest'
                 title={'Anar al Twitter de la Regadora'}
             >

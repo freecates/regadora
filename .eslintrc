@@ -1,0 +1,19 @@
+{
+    "extends": ["airbnb-base", "next"],
+    "rules": {
+        "indent": ["warn", 4],
+        "import/no-unresolved": 0,
+        "operator-linebreak": [
+            1,
+            "after",
+            { "overrides": { "?": "after", "+=": "none", "=": "none" } }
+        ],
+        "prefer-promise-reject-errors": "off",
+        "implicit-arrow-linebreak": "off",
+        "no-return-assign": "off",
+        "no-use-before-define": "off",
+        "no-shadow": "off",
+        "no-nested-ternary": "off",
+        "default-case": "off"
+    }
+}

@@ -79,6 +79,7 @@ export const getStaticProps = async () => {
         api.supporters.getData(),
     ]);
 
+    // eslint-disable-next-line no-undef
     const res = await fetch(`${baseUrl}/manifest.md`);
     const mdFileContent = await res.text();
 
@@ -88,8 +89,10 @@ export const getStaticProps = async () => {
 
     return {
         props: {
-            data: { ...adhesions[0], ...common[0], routes, supportersData, supportersDataEntities },
-            mdFileContent: mdFileContent,
+            data: {
+                ...adhesions[0], ...common[0], routes, supportersData, supportersDataEntities,
+            },
+            mdFileContent,
         },
         revalidate: 1,
     };

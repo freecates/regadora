@@ -1,9 +1,10 @@
 import { generateShareIcon, ShareButtons } from 'react-share';
-import styles from './SocialNetworksSupport.module.scss';
 import { useRouter } from 'next/router';
+import styles from './SocialNetworksSupport.module.scss';
 
-const { FacebookShareButton, LinkedinShareButton, TwitterShareButton, EmailShareButton } =
-    ShareButtons;
+const {
+    FacebookShareButton, LinkedinShareButton, TwitterShareButton, EmailShareButton,
+} = ShareButtons;
 
 const FacebookIcon = generateShareIcon('facebook');
 const TwitterIcon = generateShareIcon('twitter');
@@ -27,7 +28,7 @@ const SocialNetworksSupport = ({ title, claim }) => {
                     url={url}
                     className={styles.someNetworkButton}
                     quote={supportQuote}
-                    hashtag={`#FestivalRegagora`}
+                    hashtag={'#FestivalRegagora'}
                     role={'button'}
                 >
                     <FacebookIcon size={32} round />

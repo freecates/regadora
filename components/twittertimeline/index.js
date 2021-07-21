@@ -2,9 +2,11 @@ import React from 'react';
 
 const TwitterTimeline = ({ id }) => {
     React.useEffect(() => {
+        // eslint-disable-next-line no-undef
         const s = document.createElement('script');
         s.setAttribute('src', 'https://platform.twitter.com/widgets.js');
         s.setAttribute('async', 'true');
+        // eslint-disable-next-line no-undef
         document.head.appendChild(s);
     }, []);
 

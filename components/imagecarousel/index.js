@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
@@ -13,8 +14,8 @@ const ImageCarousel = ({ images }) => {
         loop: true,
         duration: 4000,
         move(s) {
-            const new_opacities = s.details().positions.map((slide) => slide.portion);
-            setOpacities(new_opacities);
+            const newOpacities = s.details().positions.map((slide) => slide.portion);
+            setOpacities(newOpacities);
         },
         dragStart: () => {
             setPause(true);

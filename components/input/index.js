@@ -10,22 +10,20 @@ const Input = ({
     pattern,
     title,
     onClick,
-}) => {
-    return (
-        <div className={styles.input}>
-            <label htmlFor={id}>{name}</label>
-            <input
-                id={id}
-                name={name}
-                type={type}
-                autoComplete={autoComplete}
-                required={required}
-                placeholder={placeholder}
-                pattern={pattern}
-                title={title}
-                onClick={() => onClick && onClick()}
-            />
-        </div>
-    );
-};
+}) => (
+    <div className={styles.input}>
+        <label htmlFor={id}>{name}</label>
+        <input
+            id={id}
+            name={name}
+            type={type}
+            autoComplete={autoComplete}
+            required={required}
+            placeholder={placeholder}
+            pattern={pattern}
+            title={title}
+            onClick={() => onClick && onClick()}
+        />
+    </div>
+);
 export default Input;
