@@ -5,13 +5,10 @@
     width: 100%;
 
     &.fader {
-        height: 65vw;
+        min-height: 0;
         position: relative;
         overflow: hidden;
-
-        @media (min-width: 768px) {
-            height: 50vw;
-        }
+        padding-bottom: 50%;
 
         .fader__slide {
             width: 100%;
