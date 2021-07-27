@@ -55,7 +55,9 @@ const Home = ({
                     src={'/capcalera-web-regadora.jpg'}
                 />
             </h1>
-            <CarouselNoSSR images={carouselImages} />
+            <div className={`${styles.carouselWrapper}`}>
+                <CarouselNoSSR images={carouselImages} />
+            </div>
             <div className={styles.container}>
                 <main className={`${styles.main} ${styles.home}`}>
                     <section className={styles.grid}>
