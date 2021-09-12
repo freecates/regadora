@@ -20,6 +20,13 @@ const ActivityType = ({ data }) => {
         >
             <div className={styles.container}>
                 <main className={styles.main}>
+                    <p>
+                        <Link href={'/activitats'}>
+                            <a>
+                                <strong>[veure totes les activitats]</strong>
+                            </a>
+                        </Link>
+                    </p>
                     <h1>{activitatsDataType[0].type.name}</h1>
                     <section className={styles.grid}>
                         <ActivityList data={activitatsDataType} />

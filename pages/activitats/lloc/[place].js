@@ -20,9 +20,14 @@ const ActivityPlace = ({ data }) => {
         >
             <div className={styles.container}>
                 <main className={styles.main}>
-                    <h1>
-                        {activitatsDataPlace[0].place.name.split('|')[0]}
-                    </h1>
+                    <p>
+                        <Link href={'/activitats'}>
+                            <a>
+                                <strong>[veure totes les activitats]</strong>
+                            </a>
+                        </Link>
+                    </p>
+                    <h1>{activitatsDataPlace[0].place.name.split('|')[0]}</h1>
                     <section className={styles.grid}>
                         <ActivityList data={activitatsDataPlace} />
                     </section>
