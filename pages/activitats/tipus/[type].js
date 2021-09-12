@@ -42,7 +42,7 @@ export const getStaticPaths = async () => {
 
     const paths = activitatsData.map((a) => `/activitats/tipus/${a.type.id}`);
 
-    return { paths, fallback: true };
+    return { paths, fallback: false };
 };
 
 export const getStaticProps = async ({ params }) => {

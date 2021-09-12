@@ -41,8 +41,9 @@ export const getStaticPaths = async () => {
     const [activitatsData] = await Promise.all([api.activitatsData.getData()]);
 
     const paths = activitatsData.map((a) => `/activitats/lloc/${a.place.slug}`);
+    console.log('paths ', paths);
 
-    return { paths, fallback: true };
+    return { paths, fallback: false };
 };
 
 export const getStaticProps = async ({ params }) => {
