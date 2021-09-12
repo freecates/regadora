@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import styles from './ActivityList.module.scss';
 
 const ActivityList = ({ data }) => {
@@ -16,7 +17,14 @@ const ActivityList = ({ data }) => {
     return data.map((d, index) => (
         <div className={styles.card} key={`${index}-${d.id}`}>
             <h3>
-                <span className={styles[d.type.id]}>{d.type.name}</span>
+                <Link href={`/activitats/tipus/${d.type.id}`}>
+                    <a
+                        title={`Veure totes les del tipus: ${d.type.name}`}
+                        className={styles[d.type.id]}
+                    >
+                        {d.type.name}
+                    </a>
+                </Link>
                 <span>{d.title}</span>
             </h3>
             {d.familyFriendly && (
@@ -74,7 +82,11 @@ const ActivityList = ({ data }) => {
                     <>{formatDate(d.startDate)} hores.</>
                 )}{' '}
                 <br />
-                <span className={styles.pill}>{d.place.name}</span>{' '}
+                <Link href={`/activitats/lloc/${d.place.slug}`}>
+                    <a>
+                        <span className={styles.pill}>{d.place.name}</span>
+                    </a>
+                </Link>{' '}
                 <span className={styles.small}>[{d.place.address}]</span>
             </p>
         </div>

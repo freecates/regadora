@@ -16,14 +16,8 @@
         color: $black;
 
         a {
-            transition: color ease 1s;
-            &:hover {
-                color: $black;
-            }
-        }
-
-        span {
             padding-right: 1rem;
+            transition: color ease 1s;
 
             &.debate {
                 color: $main-green;
@@ -42,6 +36,27 @@
             }
             &.activity {
                 color: $secondary-dark-lilac;
+            }
+
+            &:hover {
+                &.debate {
+                    color: darken($main-green, 10%);
+                }
+                &.music {
+                    color: darken($secondary-lilac, 10%);
+                }
+                &.exhibition {
+                    color: darken($secondary-dark-green, 10%);
+                }
+                &.workshop {
+                    color: darken($main-light-green, 10%);
+                }
+                &.documentary {
+                    color: darken($main-blue, 10%);
+                }
+                &.activity {
+                    color: darken($secondary-dark-lilac, 10%);
+                }
             }
         }
     }
@@ -73,15 +88,15 @@
     .pill {
         background: $black;
         color: $white;
-        padding: .25rem;
+        padding: 0.25rem;
         text-transform: uppercase;
-        font-size: .65rem;
+        font-size: 0.65rem;
 
         &.pillFamily {
             background: $secondary-red;
         }
     }
     .small {
-        font-size: .85rem;
+        font-size: 0.85rem;
     }
 }
