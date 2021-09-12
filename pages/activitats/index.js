@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
@@ -26,6 +27,11 @@ const Activitats = ({ data }) => {
         >
             <div className={styles.container}>
                 <main className={styles.main}>
+                    <p>
+                        <a download href={'/programa-regadora-2021.pdf'}>
+                            <strong>[Programa en PDF]</strong>
+                        </a>
+                    </p>
                     <h1>Divendres</h1>
                     <section className={styles.grid}>
                         <ActivityList data={fridayActivities} />
@@ -34,6 +40,11 @@ const Activitats = ({ data }) => {
                     <section className={styles.grid}>
                         <ActivityList data={saturdayActivities} />
                     </section>
+                    <p>
+                        <a download href={'/programa-regadora-2021.pdf'}>
+                            <strong>[Programa en PDF]</strong>
+                        </a>
+                    </p>
                 </main>
             </div>
         </Layout>
