@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
