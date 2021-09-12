@@ -20,7 +20,9 @@ const ActivityPlace = ({ data }) => {
         >
             <div className={styles.container}>
                 <main className={styles.main}>
-                    <h1>{activitatsDataPlace[0].place.name}</h1>
+                    <h1>
+                        {activitatsDataPlace[0].place.name.split('|')[0]}
+                    </h1>
                     <section className={styles.grid}>
                         <ActivityList data={activitatsDataPlace} />
                     </section>
@@ -41,7 +43,6 @@ export const getStaticPaths = async () => {
     const [activitatsData] = await Promise.all([api.activitatsData.getData()]);
 
     const paths = activitatsData.map((a) => `/activitats/lloc/${a.place.slug}`);
-    console.log('paths ', paths);
 
     return { paths, fallback: false };
 };

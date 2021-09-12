@@ -37,6 +37,9 @@
             &.activity {
                 color: $secondary-dark-lilac;
             }
+            &.talk {
+                color: $secondary-lilac;
+            }
 
             &:hover {
                 &.debate {
@@ -56,6 +59,9 @@
                 }
                 &.activity {
                     color: darken($secondary-dark-lilac, 10%);
+                }
+                &.talk {
+                    color: darken($secondary-lilac, 10%);
                 }
             }
         }
