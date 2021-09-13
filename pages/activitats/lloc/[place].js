@@ -34,6 +34,9 @@ const ActivityPlace = ({ data }) => {
                     <section className={styles.grid}>
                         <ActivityList data={activitatsDataPlace} />
                     </section>
+                    <section>
+                        <ActivityTagList />
+                    </section>
                     <p>
                         <Link href={'/activitats'}>
                             <a>

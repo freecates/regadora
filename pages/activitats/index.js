@@ -42,6 +42,9 @@ const Activitats = ({ data }) => {
                     <section className={styles.grid}>
                         <ActivityList data={saturdayActivities} />
                     </section>
+                    <section>
+                        <ActivityTagList />
+                    </section>
                     <p>
                         <a download href={'/programa-regadora-2021.pdf'}>
                             <strong>[Programa en PDF]</strong>
