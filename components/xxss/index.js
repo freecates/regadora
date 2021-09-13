@@ -21,7 +21,7 @@ const XXSS = () => (
             <a
                 target='_blank'
                 rel={'noopener nofollow noreferrer'}
-                href='https://twitter.com/regadorafest'
+                href='https://twitter.com/laregadorasbd'
                 title={'Anar al Twitter de la Regadora'}
             >
                 <span>
