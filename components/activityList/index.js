@@ -1,6 +1,33 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import styles from './ActivityList.module.scss';
+
+const ActivityTagList = () => {
+    const tagList = [
+        { type: { id: 'debate', name: 'Taula Rodona' } },
+        { type: { id: 'talk', name: 'Xerrada' } },
+        { type: { id: 'music', name: 'Música' } },
+        { type: { id: 'activity', name: 'Activitat' } },
+        { type: { id: 'workshop', name: 'Taller' } },
+        { type: { id: 'documentary', name: '[REG] - Festival Audiovisual' } },
+        { type: { id: 'exhibition', name: 'Exhibició' } },
+    ];
+    return (
+        <div className={styles.tag}>
+            {tagList.map((d, index) => (
+                <h3 className={styles.tag} key={`${index}-${d.id}`}>
+                    <Link href={`/activitats/tipus/${d.type.id}`}>
+                        <a
+                            title={`Veure totes les del tipus: ${d.type.name}`}
+                            className={styles[d.type.id]}
+                        >
+                            {d.type.name}
+                        </a>
+                    </Link>
+                </h3>
+            ))}
+        </div>
+    );
+};
 
 const ActivityList = ({ data }) => {
     const formatDate = (date) => {
@@ -94,3 +121,4 @@ const ActivityList = ({ data }) => {
 };
 
 export default ActivityList;
+export { ActivityTagList };

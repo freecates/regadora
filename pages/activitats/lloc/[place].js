@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
-import ActivityList from '@components/activityList';
+import ActivityList, { ActivityTagList } from '@components/activityList';
 
 const ActivityPlace = ({ data }) => {
     const {
@@ -27,6 +27,9 @@ const ActivityPlace = ({ data }) => {
                             </a>
                         </Link>
                     </p>
+                    <section>
+                        <ActivityTagList />
+                    </section>
                     <h1>{activitatsDataPlace[0].place.name.split('|')[0]}</h1>
                     <section className={styles.grid}>
                         <ActivityList data={activitatsDataPlace} />

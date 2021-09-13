@@ -1,7 +1,7 @@
 import styles from '@styles/Home.module.scss';
 import api from '@libs/api.js';
 import Layout from '@components/layout';
-import ActivityList from '@components/activityList';
+import ActivityList, { ActivityTagList } from '@components/activityList';
 
 const Activitats = ({ data }) => {
     const {
@@ -11,6 +11,7 @@ const Activitats = ({ data }) => {
         siteTitle,
         routes,
         claim,
+        activitatsData,
         fridayActivities,
         saturdayActivities,
     } = data;
@@ -31,6 +32,9 @@ const Activitats = ({ data }) => {
                             <strong>[Programa en PDF]</strong>
                         </a>
                     </p>
+                    <section>
+                        <ActivityTagList />
+                    </section>
                     <h1>Divendres</h1>
                     <section className={styles.grid}>
                         <ActivityList data={fridayActivities} />
@@ -63,6 +67,7 @@ export const getStaticProps = async () => {
         props: {
             data: {
                 ...activitats[0],
+                activitatsData,
                 fridayActivities,
                 saturdayActivities,
                 ...common[0],

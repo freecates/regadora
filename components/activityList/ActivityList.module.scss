@@ -38,7 +38,7 @@
                 color: $secondary-dark-lilac;
             }
             &.talk {
-                color: $secondary-lilac;
+                color: $secondary-red;
             }
 
             &:hover {
@@ -61,7 +61,7 @@
                     color: darken($secondary-dark-lilac, 10%);
                 }
                 &.talk {
-                    color: darken($secondary-lilac, 10%);
+                    color: darken($secondary-red, 10%);
                 }
             }
         }
@@ -99,10 +99,72 @@
         font-size: 0.65rem;
 
         &.pillFamily {
-            background: $secondary-red;
+            background: lighten($main-dark-blue, 20%);
         }
     }
     .small {
         font-size: 0.85rem;
+    }
+}
+
+.tag {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h3 {
+        margin: .5rem;
+
+        a {
+            color: $white;
+            font-size: .65rem;
+            transition: background ease 1s;
+            padding: .5rem;
+
+            &.debate {
+                background: $main-green;
+            }
+            &.music {
+                background: $secondary-lilac;
+            }
+            &.exhibition {
+                background: $secondary-dark-green;
+            }
+            &.workshop {
+                background: $main-light-green;
+            }
+            &.documentary {
+                background: $main-blue;
+            }
+            &.activity {
+                background: $secondary-dark-lilac;
+            }
+            &.talk {
+                background: $secondary-red;
+            }
+
+            &:hover {
+                &.debate {
+                    background: darken($main-green, 10%);
+                }
+                &.music {
+                    background: darken($secondary-lilac, 10%);
+                }
+                &.exhibition {
+                    background: darken($secondary-dark-green, 10%);
+                }
+                &.workshop {
+                    background: darken($main-light-green, 10%);
+                }
+                &.documentary {
+                    background: darken($main-blue, 10%);
+                }
+                &.activity {
+                    background: darken($secondary-dark-lilac, 10%);
+                }
+                &.talk {
+                    background: darken($secondary-red, 10%);
+                }
+            }
+        }
     }
 }
