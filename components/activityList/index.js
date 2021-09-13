@@ -1,5 +1,10 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import styles from './ActivityList.module.scss';
+
+const CarouselNoSSR = dynamic(() => import('@components/imagecarousel'), { ssr: false });
+
+const assetsURL = 'https://regadora-data.vercel.app/assets/images';
 
 const ActivityTagList = () => {
     const tagList = [
@@ -116,6 +121,9 @@ const ActivityList = ({ data }) => {
                 </Link>{' '}
                 <span className={styles.small}>[{d.place.address}]</span>
             </p>
+            {d.images && (
+                <CarouselNoSSR images={d.images} height={1008} width={756} assetsURL={assetsURL} />
+            )}
         </div>
     ));
 };

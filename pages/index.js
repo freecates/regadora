@@ -5,6 +5,8 @@ import Layout from '@components/layout';
 import Button from '@components/button';
 import dynamic from 'next/dynamic';
 
+const assetsURL = 'https://regadora-data.vercel.app/assets/images';
+
 const CarouselNoSSR = dynamic(
     () => import('@components/imagecarousel'),
     { ssr: false },
@@ -56,7 +58,12 @@ const Home = ({
                 />
             </h1>
             <div className={`${styles.carouselWrapper}`}>
-                <CarouselNoSSR images={carouselImages} />
+                <CarouselNoSSR
+                    images={carouselImages}
+                    height={1365}
+                    width={2048}
+                    assetsURL={assetsURL}
+                />
             </div>
             <div className={styles.container}>
                 <main className={`${styles.main} ${styles.home}`}>

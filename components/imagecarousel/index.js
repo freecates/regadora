@@ -3,7 +3,9 @@ import React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import styles from './ImageCarousel.module.scss';
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({
+    images, width, height, assetsURL,
+}) => {
     const [pause, setPause] = React.useState(false);
     const timer = React.useRef();
     const [opacities, setOpacities] = React.useState([]);
@@ -51,7 +53,7 @@ const ImageCarousel = ({ images }) => {
                     className={`${styles.fader__slide}`}
                     style={{ opacity: opacities[idx] }}
                 >
-                    <img src={i.src} alt={i.alt} loading={'lazy'} height={1365} width={2048} />
+                    <img src={`${assetsURL}${i.src}`} alt={i.alt} loading={'lazy'} height={height} width={width} />
                 </div>
             ))}
         </div>
