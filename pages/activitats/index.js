@@ -11,7 +11,6 @@ const Activitats = ({ data }) => {
         siteTitle,
         routes,
         claim,
-        activitatsData,
         fridayActivities,
         saturdayActivities,
     } = data;
@@ -67,7 +66,6 @@ export const getStaticProps = async () => {
         props: {
             data: {
                 ...activitats[0],
-                activitatsData,
                 fridayActivities,
                 saturdayActivities,
                 ...common[0],
