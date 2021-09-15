@@ -42,6 +42,9 @@
             &.talk {
                 color: $secondary-red;
             }
+            &.fair {
+                color: $secondary-dark-red;
+            }
 
             &:hover {
                 &.debate {
@@ -64,6 +67,9 @@
                 }
                 &.talk {
                     color: darken($secondary-red, 10%);
+                }
+                &.talk {
+                    color: darken($secondary-dark-red, 10%);
                 }
             }
         }
@@ -143,6 +149,9 @@
             &.talk {
                 background: $secondary-red;
             }
+            &.fair {
+                background: $secondary-dark-red;
+            }
 
             &:hover {
                 &.debate {
@@ -165,6 +174,9 @@
                 }
                 &.talk {
                     background: darken($secondary-red, 10%);
+                }
+                &.fair {
+                    background: darken($secondary-dark-red, 10%);
                 }
             }
         }

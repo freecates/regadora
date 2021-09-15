@@ -15,6 +15,7 @@ const ActivityTagList = () => {
         { type: { id: 'workshop', name: 'Taller' } },
         { type: { id: 'documentary', name: '[REG] - Festival Audiovisual' } },
         { type: { id: 'exhibition', name: 'Exhibició' } },
+        { type: { id: 'fair', name: 'Fira' } },
     ];
     return (
         <div className={styles.tag}>
