@@ -69,7 +69,7 @@ const ActivityList = ({ data }) => {
                     <strong>{d.description}</strong>
                 </p>
             )}
-            {d.longDescription && <p>{d.longDescription}</p>}
+            {d.longDescription && <p dangerouslySetInnerHTML={{ __html: d.longDescription }} />}
             {d.type.speakers && (
                 <p>
                     Amb:
