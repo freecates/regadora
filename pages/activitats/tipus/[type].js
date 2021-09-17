@@ -9,13 +9,16 @@ const ActivityType = ({ data }) => {
         title, description, footer, siteTitle, routes, claim, activitatsDataType,
     } = data;
 
+    const fullTitle = `${title}, ${activitatsDataType[0].type.name}`;
+    const fullDescription = `${description} (${activitatsDataType[0].type.name})`;
+
     return (
         <Layout
             title={siteTitle}
             navRoutes={routes}
             footer={footer}
-            pageTitle={title}
-            pageDescription={description}
+            pageTitle={fullTitle}
+            pageDescription={fullDescription}
             claim={claim}
         >
             <div className={styles.container}>

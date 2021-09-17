@@ -9,13 +9,16 @@ const ActivityPlace = ({ data }) => {
         title, description, footer, siteTitle, routes, claim, activitatsDataPlace,
     } = data;
 
+    const fullTitle = `${title}, ${activitatsDataPlace[0].place.name.split('|')[0]}`;
+    const fullDescription = `${description} (${activitatsDataPlace[0].place.name.split('|')[0]})`;
+
     return (
         <Layout
             title={siteTitle}
             navRoutes={routes}
             footer={footer}
-            pageTitle={title}
-            pageDescription={description}
+            pageTitle={fullTitle}
+            pageDescription={fullDescription}
             claim={claim}
         >
             <div className={styles.container}>
